@@ -1,0 +1,74 @@
+@media (min-width: 1200px)  {
+    .m{display: none;}
+    .tab{display: none;}
+    .pc{display: block;}
+
+    header .wrap{
+        margin: 40px auto; 
+    }
+    header .wrap h1 img{width: 130px;}
+    header .wrap .menu{
+        font-size: 24px;
+    }
+    header .wrap .menu li{
+        margin-bottom: 25px;
+    }
+
+    .about .wrap .title{padding: 20px 40px 20px 40px;}
+    .about .wrap .title h2{font-size: 35px;}
+    .about .wrap .con{
+        padding: 120px 0 120px 0;
+        text-align: center;
+        color: #555;
+    }
+
+    .coding .wrap .title{padding: 20px 40px 20px 40px;}
+    .coding .wrap .title h2{font-size: 35px;}
+    .coding .wrap .con .box a .top{
+        padding: 35px 0;
+    }
+    .coding .wrap .con .box a .top .text .tit{font-size: 50px; margin-bottom: 5px;}
+    .coding .wrap .con .box a .top .text .txt{font-size: 30px; line-height: 45px;}
+    .coding .wrap .con .box a .top .star{
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+    .coding .wrap .con .box a .top .star img{width: 40px;}
+    .coding .wrap .con .box a .top .number{font-size: 40px; margin-bottom: unset; position: absolute; top: 10%; left: 10%;} 
+    .coding .wrap .con .box a .top .day{
+        font-size: 16px;
+    }
+    .coding .wrap .con .box a .bottom .text .tit{font-size: 30px;}
+    .coding .wrap .con .box a .bottom .text .txt{font-size: 16px;}
+    .design .wrap .title h2{font-size: 35px;}
+
+    .design .wrap .detail{width: 100%;}
+    .design .wrap .detail .tit{font-size: 18px;}
+    .design .wrap .detail .tit .line{
+        width: 80%;
+    }
+    .design .wrap .detail .container{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .design .wrap .else{width: 100%;}
+    .design .wrap .else .tit{font-size: 18px;}
+    .design .wrap .else .tit .line{
+        width: 80%;
+    }
+    .design .wrap .else .container{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,32 @@
+@media (min-width: 770px) {
+    .pc{display: none;}
+    .m{display: none;}
+    .tab{display: block;}
+
+    header .wrap .menu{
+        font-size: 23px;
+    }
+    header .wrap .menu li{
+        margin-bottom: 19px;
+    }
+    .coding .wrap .con .box{
+        height: 50vh;
+    }
+    .coding .wrap .con .box a .top .number{font-size: 25px;} 
+    .coding .wrap .con .box a .top .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .coding .wrap .con .box a .top .text .tit{font-size: 40px; margin-bottom: 10px;}
+
+    .design .wrap .else .container .box a .text .detail{font-size: 18px;}
+
+    footer .wrap .top{
+        display: flex;
+        flex-direction: unset;
+        justify-content: space-between;
+        align-items: end;
+        
+    }
+}

@@ -1,0 +1,544 @@
+*{margin: 0; padding: 0;background-repeat: no-repeat; box-sizing: border-box;}
+ul, ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{display: block; max-width: 100%;}
+button{background-color: transparent; border: none; cursor: pointer;}
+input{background-color: transparent; border: none;}
+.tab{display: none;}
+.pc{display: none;}
+.m{display: block;}
+
+#wrapper{min-width: 345px; background-color: white;}
+
+@font-face {
+    font-family: "Metro";
+    src: url(../fonts/Metropolis/Metropolis-Black.otf);
+    src: url(../fonts/Metropolis/Metropolis-Bold.otf);
+    src: url(../fonts/Metropolis/Metropolis-ExtraBold.otf);
+    src: url(../fonts/Metropolis/Metropolis-ExtraLight.otf);
+    src: url(../fonts/Metropolis/Metropolis-Light.otf);
+    src: url(../fonts/Metropolis/Metropolis-Medium.otf);
+}
+@font-face {
+    font-family: "Metropolis_Medium";
+    src: url(../fonts/Metropolis/Metropolis-Light.otf);
+}
+@font-face {
+    font-family: "Metropolis_Thin";
+    src: url(../fonts/Metropolis/Metropolis-Thin.otf);
+}
+
+@font-face {
+    font-family: "Metropolis_Regular";
+    src: url(../fonts/Metropolis/Metropolis-Regular.otf);
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Pretendard_200";
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pretendard_300";
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard_600';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Pretendard_800";
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Butler";
+    src: url(../fonts/Butler/Butler_Black.otf);
+    src: url(../fonts/Butler/Butler_ExtraBold.otf);
+    src: url(../fonts/Butler/Butler_Light.otf);
+    src: url(../fonts/Butler/Butler_Ultra_Light.otf);
+}
+@font-face {
+    font-family: "Butler_Regular";
+    src: url(../fonts/Butler/Butler_Regular.otf);
+}
+@font-face {
+    font-family: "Butler_Bold";
+    src: url(../fonts/Butler/Butler_Bold.otf);
+}
+@font-face {
+    font-family: "Butler_Light";
+    src: url(../fonts/Butler/Butler_Light.otf);
+}
+@font-face {
+    font-family: "Butler_Medium";
+    src: url(../fonts/Butler/Butler_Medium.otf);
+}
+
+header{width: 100%; position: absolute; z-index: 100; top: 0; left: 0;}
+header .wrap{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+header .wrap h1 img{width: 100px;}
+header .wrap .menu{
+    font-family: "Butler_Regular";
+    font-size: 20px;
+    text-align: right;
+}
+header .wrap .menu li{
+    margin-bottom: 15px;
+    color: #4161e8;
+}
+header .wrap .menu li:last-child{
+    margin-bottom: 0;
+}
+header .wrap .menu li:hover{
+    color: #555;
+}
+header .wrap .menu li:hover::before{
+    content: '·';
+    margin-right: 10px;
+}
+
+.remote{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 200;
+}
+.remote .btn{}
+.remote .btn a{
+    background-color: #ffffff80;
+    border: 1px solid #4161e8;
+    color: #4161e8;
+    font-family: "Metro";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 13px;
+    padding-top: 10px;
+}
+.remote .btn a::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #4161e8;
+    border-bottom: 2px solid #4161e8;
+    position: absolute;
+    right: 50%; 
+    top: 14px;
+    transform: translateX(50%) rotate(135deg); 
+}
+
+.banner{}
+.banner .wrap{
+    width: 100%;
+}
+.banner .wrap video{
+    width: 100%;
+}
+
+.about{width: 100%; background-color: #edede8;}
+.about .wrap{position: relative;}
+.about .wrap .title{
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #edede8;
+}
+.about .wrap .title h2{font-family: "Butler_Bold"; color: #4161e8; font-size: 24px;}
+.about .wrap .con{
+    padding: 80px 0 80px 0;
+    text-align: center;
+    color: #555;
+}
+.about .wrap .con .me{font-size: 27px; margin-bottom: 30px;}
+.about .wrap .con .me .name{
+    font-family: "Pretendard";
+    font-weight: bold;
+    color: #4161e8;
+    margin-bottom: 10px;
+}
+.about .wrap .con .me .birth{font-family: "Metro";}
+.about .wrap .con .box{
+    font-family: "Pretendard";
+    font-weight: 100;
+    margin-bottom: 50px;
+    line-height: 25px;
+    position: relative;
+    font-size: 16px;
+}
+.about .wrap .con .box::after{
+    content: '';
+    background-image: url(../images/star_b.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    right: 50%;
+    transform: translateX(50%);
+    animation: rotate_image 1s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(180deg) translate(-50%);
+    }
+}
+
+.about .wrap .con .box:nth-child(3):after{
+    top: 65px;
+}
+.about .wrap .con .box:last-child{
+    margin-bottom: 0;
+}
+.about .wrap .con .box:last-child:after{
+    display: none;
+}
+
+.about .wrap .con .box span{
+    font-weight: 900;
+    color: #4161e8;
+    font-size: 20px;
+}
+
+.coding{width: 100%; background-color: #4161e8;}
+.coding .wrap{position: relative; padding: 80px 0 0 0;}
+.coding .wrap .title{
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4161e8;
+}
+.coding .wrap .title h2{font-family: "Butler_Bold"; color: white; font-size: 24px; white-space: nowrap;}
+.coding .wrap .con{
+    font-family: "Butler_Medium";
+    color: white;
+    text-align: center;
+}
+.coding .wrap .con .box{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+}
+.coding .wrap .con .box a{}
+.coding .wrap .con .box a .top{
+    padding: 30px 0;
+    background-color: #4161e8;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+.coding .wrap .con .box a .top .number{font-family: "Butler_Light"; font-size: 16px; margin-bottom: 20px;}
+.coding .wrap .con .box a .top .text{}
+.coding .wrap .con .box a .top .text .tit{font-size: 30px; margin-bottom: 5px;}
+.coding .wrap .con .box a .top .text .txt{font-size: 16px; line-height: 25px;}
+.coding .wrap .con .box a .top .day{
+    font-family: "Metropolis_Thin";
+    font-size: 12px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.coding .wrap .con .box a .top .day span{
+    font-family: "Metropolis_Regular";
+}
+.coding .wrap .con .box a .top .star{
+    display: none;
+}
+.coding .wrap .con .box a .bottom{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: all 0.5s;
+}
+.coding .wrap .con:nth-child(2) .box a .bottom{
+    background-image: url(../images/nespresso.jpg);
+    background-position: center center;
+    background-size: cover;
+    scale: 100%;
+}
+.coding .wrap .con .box:hover a .bottom{
+    scale: 110%;
+}
+.coding .wrap .con:nth-child(3) .box a .bottom{
+    background-image: url(../images/heymoon.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.coding .wrap .con:nth-child(4) .box a .bottom{
+    background-image: url(../images/bluebottle.webp);
+    background-position: top center;
+    background-size: cover;
+}
+.coding .wrap .con .box a .bottom::before{
+    content: "";
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.coding .wrap .con .box a .bottom .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Pretendard_300";
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.coding .wrap .con .box a .bottom .text .tit{font-size: 20px; font-weight: 900; margin-bottom: 10px;}
+.coding .wrap .con .box a .bottom .text .txt{font-size: 14px; line-height: 25px; font-weight: 100; margin-bottom: 20px;}
+.coding .wrap .con .box a .bottom .text .txt span{font-family: "Pretendard_600";}
+.coding .wrap .con .box a .bottom .btn{
+    font-family: "Metropolis_Medium";
+    font-size: 16px;
+    width: 50px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff30;
+    transition: all 0.3s;
+}
+.coding .wrap .con .box a .bottom .btn:hover{
+    box-shadow: 0px 0px 10px 1px #00000050;
+    width: 90px;
+}
+
+.design{}
+.design .wrap{margin: 160px auto; width: 100%;}
+.design .wrap .title{margin-bottom: 20px;}
+.design .wrap .title h2{font-family: "Butler_Bold"; color: #4161e8; font-size: 24px; text-align: center;}
+.design .wrap .detail{width: 100%;}
+.design .wrap .detail .tit{
+    border-bottom: 1px solid #4161e8;
+    border-top: 1px solid #4161e8;
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+}
+.design .wrap .detail .tit .line{
+    padding: 11px 0;
+    width: 90%;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+}
+.design .wrap .detail .tit p{font-family: "Pretendard"; color: #4161e8;}
+.design .wrap .detail .tit p:last-child{font-family: "Metropolis_Regular";}
+.design .wrap .detail .tit p::after{
+    content: '/';
+    color: #4161e8;
+    font-family: "Pretendard";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.design .wrap .detail .container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.design .wrap .detail .container .box{
+    filter:grayscale(100%);
+    transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+.design .wrap .detail .container .box:hover{
+    filter:grayscale(0);
+}
+.design .wrap .detail .container .box .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    font-family: "Metropolis_Medium";
+    color: white;
+    border: 1px solid white;
+    background-color: #00000070;
+    border-radius: 30px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.design .wrap .detail .container .box:hover .btn{
+    opacity: 100%;
+}
+.design .wrap .detail .container .box a{}
+.design .wrap .detail .container .box a img{scale: 100%; transition: all 0.3s;}
+.design .wrap .detail .container .box:hover a img{scale: 110%;}
+.design .wrap .else{width: 100%;}
+.design .wrap .else .tit{
+    width: 100%;
+    border-bottom: 1px solid #4161e8;
+    border-top: 1px solid #4161e8;
+    margin-bottom: 50px;
+    position: relative;
+    font-size: 16px;
+}
+.design .wrap .else .tit .line{
+    padding: 11px 0;
+    width: 90%;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+}
+.design .wrap .else .tit p{font-family: "Pretendard"; color: #4161e8;}
+.design .wrap .else .tit p:last-child{font-family: "Metropolis_Regular";}
+
+.design .wrap .else .tit p::after{
+    content: '/';
+    color: #4161e8;
+    font-family: "Pretendard";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.design .wrap .else .container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.design .wrap .else .container .box{
+    position: relative;
+    filter:grayscale(100%);
+    transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+.design .wrap .else .container .box:hover{
+    filter:grayscale(0);
+}
+.design .wrap .else .container .box .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    font-family: "Metropolis_Medium";
+    color: white;
+    border: 1px solid white;
+    background-color: #00000070;
+    border-radius: 30px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.design .wrap .else .container .box:hover .btn{
+    opacity: 100%;
+}
+.design .wrap .else .container .box .text{position: absolute; top: 15px; left: 15px; color: white; font-weight: 400; z-index: 20;}
+.design .wrap .else .container .box:nth-child(odd) .text{color: black;}
+.design .wrap .else .container .box a .text{}
+.design .wrap .else .container .box a .text p{font-family: "Metropolis_Medium"; font-size: 13px; margin-bottom: 5px;}
+.design .wrap .else .container .box a .text .detail{font-family: "Pretendard"; font-size: 16px;}
+.design .wrap .else .container .box a img{scale: 100%; transition: all 0.3s;}
+.design .wrap .else .container .box:hover a img{scale: 110%;}
+
+footer{background-color: #4161e8; width: 100%;}
+footer .wrap{
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 90%;
+    color: white;
+    font-family: "Metropolis_Medium";
+    text-align: center;
+}
+footer .wrap .top{
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .wrap .top .logo{}
+footer .wrap .top .logo img{width: 120px;}
+footer .wrap .top .copy{}
+footer .wrap .bottom{}
+footer .wrap .bottom .con{padding-top: 30px; margin-bottom: 10px;}
+footer .wrap .bottom .con:last-child{padding-top: 0; margin-bottom: 0;}
