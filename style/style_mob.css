@@ -4,6 +4,7 @@ a{text-decoration: none; color: inherit;}
 img{display: block; max-width: 100%;}
 button{background-color: transparent; border: none; cursor: pointer;}
 input{background-color: transparent; border: none;}
+
 .tab{display: none;}
 .pc{display: none;}
 .m{display: block;}
@@ -232,7 +233,7 @@ header .wrap .menu li:hover::before{
 }
 
 .about .wrap .con .box:nth-child(3):after{
-    top: 65px;
+    top: 90px;
 }
 .about .wrap .con .box:last-child{
     margin-bottom: 0;
