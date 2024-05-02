@@ -63,7 +63,7 @@ input{background-color: transparent; border: none;}
     font-display: swap;
 }
 @font-face {
-    font-family: 'Pretendard_600';
+    font-family: "Pretendard_600";
     font-weight: 600;
     font-style: normal;
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
@@ -207,7 +207,6 @@ header .wrap .menu li:hover::before{
 .about .wrap .con .me .birth{font-family: "Metro";}
 .about .wrap .con .box{
     font-family: "Pretendard";
-    font-weight: 100;
     margin-bottom: 50px;
     line-height: 25px;
     position: relative;
@@ -233,7 +232,7 @@ header .wrap .menu li:hover::before{
 }
 
 .about .wrap .con .box:nth-child(3):after{
-    top: 90px;
+    top: 65px;
 }
 .about .wrap .con .box:last-child{
     margin-bottom: 0;
@@ -243,7 +242,7 @@ header .wrap .menu li:hover::before{
 }
 
 .about .wrap .con .box span{
-    font-weight: 900;
+    font-weight: 700;
     color: #4161e8;
     font-size: 20px;
 }
@@ -290,7 +289,7 @@ header .wrap .menu li:hover::before{
 .coding .wrap .con .box a .top .text .txt{font-size: 16px; line-height: 25px;}
 .coding .wrap .con .box a .top .day{
     font-family: "Metropolis_Thin";
-    font-size: 12px;
+    font-size: 14px;
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -345,15 +344,15 @@ header .wrap .menu li:hover::before{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-family: "Pretendard_300";
+    font-family: "Pretendard";
     display: flex; 
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-.coding .wrap .con .box a .bottom .text .tit{font-size: 20px; font-weight: 900; margin-bottom: 10px;}
-.coding .wrap .con .box a .bottom .text .txt{font-size: 14px; line-height: 25px; font-weight: 100; margin-bottom: 20px;}
-.coding .wrap .con .box a .bottom .text .txt span{font-family: "Pretendard_600";}
+.coding .wrap .con .box a .bottom .text .tit{font-weight: 700; font-size: 20px; margin-bottom: 10px;}
+.coding .wrap .con .box a .bottom .text .txt{font-weight: 200; font-size: 14px; line-height: 25px; margin-bottom: 20px;}
+.coding .wrap .con .box a .bottom .text .txt span{font-weight: 600;}
 .coding .wrap .con .box a .bottom .btn{
     font-family: "Metropolis_Medium";
     font-size: 16px;
